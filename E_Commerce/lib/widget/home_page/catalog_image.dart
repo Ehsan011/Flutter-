@@ -1,16 +1,16 @@
-import 'package:e_commerce/models/catalog.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../themes.dart';
+import 'package:e_commerce/widget/themes.dart';
 
+class CatalogImage extends StatelessWidget {
+  final String image;
 
-class CatalogImg extends StatelessWidget {
-  final String img;
-  const CatalogImg({Key? key, required this.img}) : super(key: key);
+  const CatalogImage({Key? key, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(img).box
+    return Image.network(image)
+        .box
         .rounded
         .p8
         .color(Mytheme.creamColor)
